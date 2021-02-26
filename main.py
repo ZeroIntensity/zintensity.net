@@ -48,6 +48,10 @@ def rlol():
 def planned():
   return render_template('planned.html')
 
+@app.route('/projects/controlmanual', methods=['GET'])
+def cm():
+  return render_template('cm.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
   return render_template('404.html'), 404
